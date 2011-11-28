@@ -1,0 +1,94 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.all</groupId>
+	<artifactId>download-manager</artifactId>
+	<name>download-manager</name>
+	<version>${snapshot.version}</version>
+	<description>Manager of the downloaders</description>
+	
+	<parent>
+        <artifactId>parent</artifactId>
+        <groupId>com.all.maven</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+	
+	<repositories>
+		<repository>
+			<id>ArchivaSnapshots</id>
+			<url>http://ci.undahee.net/archiva/repository/snapshots</url>
+		</repository>
+		<repository>
+			<id>ArchivaInternal</id>
+			<url>http://ci.undahee.net/archiva/repository/internal</url>
+		</repository>
+	</repositories>
+	
+	<distributionManagement>
+		<repository>
+			<id>archiva.internal</id>
+			<name>Internal Release Repository</name>
+			<url>http://ci.undahee.net/archiva/repository/internal</url>
+		</repository>
+		<snapshotRepository>
+			<id>archiva.snapshots</id>
+			<name>Internal Snapshot Repository</name>
+			<url>http://ci.undahee.net/archiva/repository/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>${commons-logging.version}</version>
+		</dependency>
+		
+		<!-- ALL.COM DEPENDENCIES -->
+		<dependency>
+			<groupId>com.all.testing</groupId>
+			<artifactId>mockRunner</artifactId>
+			<version>${snapshot.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.all</groupId>
+			<artifactId>downloader</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.all</groupId>
+			<artifactId>downloader-lan</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.all</groupId>
+			<artifactId>phexcore</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.all</groupId>
+			<artifactId>downloader-rest</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+		<!-- 
+		<dependency>
+			<groupId>com.all</groupId>
+			<artifactId>downloader-youtube</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+		-->
+	</dependencies>
+	
+</project>
