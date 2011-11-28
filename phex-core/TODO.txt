@@ -1,0 +1,3 @@
+* simplify initialize process PhexCoreImpl.initialize(), this methods does lots of things
+* refactor each phex download thread creation into a non-anonymous and testable class
+* remove reference phex searcher from phex downloader, and set it inside downloadHelper 
