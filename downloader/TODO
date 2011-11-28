@@ -1,0 +1,1 @@
+* Create an Abstract Downloader class who implements common methods in order to avoid duplicate code
