@@ -1,0 +1,5 @@
+package com.all.landownloader;
+
+public enum LanDownloadMessageType {
+	TRACK_REQUEST, TRACK_RESPONSE, START_TRANSFER, PAUSE_TRANSFER, RESUME_TRANSFER, CANCEL_TRANSFER, CHUNK_TRANSFER;
+}
